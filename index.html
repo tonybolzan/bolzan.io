@@ -1,468 +1,517 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tonin Bolzan</title>
+    <meta name="description" content="Software Engineer ❤ DevOps">
+    <meta name="theme-color" content="#2B3137">
+    <link rel="preload" href="montserrat.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="perfil.webp" as="image" type="image/png">
+    <style>
+      @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-display: swap;
+        font-weight: 100 900;
+        src: url(montserrat.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
 
-<head>
-    <meta charset="UTF-8"/>
-    <title>Tonin R. Bolzan</title>
+      :root {
+          --primary-color: #5569ff;
+          --white-color: #FFFFFF;
+          --text-color: #484848;
+          --gray-color: #767676;
+          --invert-primary-color: #5569ff;
+          --invert-text-color: #FFFFFF;
+          --invert-bg-color: #2B3137;
+          --invert-gray-color: #979797;
+        }
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta http-equiv="content-language" content="pt-br">
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
 
-    <meta name="author" content="Tonin R. Bolzan">
-    <meta name="reply-to" content="contato@bolzan.io">
-    <meta name="description" content="Desenvolvedor Web & DevOps">
-    <meta name="keywords" content="sites, web, desenvolvimento, devops, sysadmin, administração de sistemas, linux, php, yii, python, html, css, mariadb, mysql">
-    <meta name="google" content="notranslate" />
+        body {
+          min-height: 100vh;
+          font-family: Montserrat;
+          background: var(--white-color);
+          transition: .3s;
+        }
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        a {
+          text-decoration: none;
+        }
 
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,800,300' rel='stylesheet' type='text/css'>
+        ul {
+          list-style: none;
+        }
 
-    <link rel="stylesheet" type="text/css" href="assets/css/all.min.css"/>
+        .container {
+          max-width: 1100px;
+          padding: 0 10px;
+          width: 100%;
+          margin: 0 auto;
+        }
 
-    <noscript><link rel="stylesheet" type="text/css" href="assets/css/fallback.css"/></noscript>
-    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="assets/css/fallback.css"/><![endif]-->
+        .header {
+          padding: 23px 0;
+          background: var(--white-color);
+          box-shadow: 0 -2px 10px rgba(0,0,0,.1);
+          transition: .3s;
+          position: sticky;
+          top: 0;
+          left: 0;
+          width: 100%;
+        }
 
-    <script data-ad-client="ca-pub-3502320284989894" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-</head>
+        .header__body {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
 
-<body>
+        .header__logo {
+          font-weight: 600;
+          font-size: 28px;
+          color: var(--text-color);
+          transition: .3s;
+        }
 
-<div class="wrapper" id="wrapper">
+        .header__rightside {
+          display: flex;
+          align-items: center;
+        }
 
-    <header>
-        <div class="banner row" id="banner">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 noPadd">
-                <div id="ri-grid" class="ri-grid ri-grid-size-2">
-                    <img class="ri-loading-image" src="assets/images/loading.gif"/>
-                    <ul class="cb-slideshow">
-                        <li><a href="#"><img src="assets/images/mosaic/git-icon.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/debian.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/kubernetes.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/docker-icon.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/linux-tux.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/php.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/composer.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/gopher.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/javascript.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/jquery.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/html-5.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/css-3.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/bootstrap.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/aws.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/google-cloud.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/digital-ocean.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/firebase.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/gitlab.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/github-octocat.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/jetbrains.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/mariadb-icon.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/mysql.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/nginx.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/nodejs.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/oauth.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/phpstorm.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/python.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/redis.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/sass.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/new-relic.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/sentry.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/terraform.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/symfony.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/terminal.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/ubuntu.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/vagrant.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/vim.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/yii.svg"/></a></li>
-                        <li><a href="#"><img src="assets/images/mosaic/bitbucket.svg"/></a></li>
-                    </ul>
-                </div>
+        .header-menu__list {
+          display: flex;
+          align-items: center;
+        }
+
+        .header-menu__item {
+          padding: 0 10px;
+        }
+
+        .header-menu__link {
+          font-weight: 500;
+          font-size: 18px;
+          color: var(--text-color);
+          display: inline-flex;
+          position: relative;
+          transition: .3s;
+        }
+
+        .header-menu__link:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -10px;
+          width: 0;
+          height: 4px;
+          background: var(--primary-color);
+          border-radius: 2px;
+          transition: .3s;
+        }
+
+        .header-menu__link:hover:after {
+          width: 100%;
+        }
+
+        .header__moon {
+          display: flex;
+          align-items: center;
+          margin-left: 10px;
+          font-size: 24px;
+          color: var(--text-color);
+          cursor: pointer;
+          transition: .3s;
+        }
+
+        .header__moon svg {
+          fill: var(--text-color);
+        }
+
+        .header__mob-menu {
+          margin-left: 10px;
+          font-size: 26px;
+          color: var(--text-color);
+          cursor: pointer;
+          transition: .3s;
+          display: flex;
+          align-items: center;
+        }
+
+        .header__mob-menu svg {
+          fill: var(--text-color);
+        }
+
+        .header__mob {
+          display: none;
+        }
+
+        .intro {
+          min-height: calc(100vh - 80px);
+          display: flex;
+          align-items: center;
+        }
+
+        .intro__body {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 30px 0;
+        }
+
+        .intro__content {
+          max-width: 500px;
+          width: 100%;
+          padding-right: 20px;
+        }
+
+        .intro__blob {
+          max-width: 500px;
+          width: 100%;
+          fill: var(--primary-color);
+        }
+
+        .intro__blob-img {
+          width: 360px;
+        }
+
+        .intro__title {
+          font-weight: 600;
+          font-size: 64px;
+          line-height: 1.2;
+          color: var(--text-color);
+          margin-bottom: 10px;
+          transition: .3s;
+        }
+
+        .intro__title span {
+          color: var(--primary-color);
+          transition: .3s;
+        }
+
+        .intro__position {
+          display: block;
+          font-weight: 500;
+          font-size: 24px;
+          color: var(--gray-color);
+          margin-bottom: 25px;
+        }
+
+        .intro__text {
+          font-size: 16px;
+          line-height: 1.3;
+          color: var(--text-color);
+          margin-bottom: 30px;
+          transition: .3s;
+          text-align: justify;
+          text-justify: inter-word;
+        }
+
+        .intro-soc {
+          display: flex;
+          margin: 0 -10px;
+          margin-top: 40px;
+          align-items: center;
+        }
+
+        .intro-soc__item {
+          padding: 0 10px;
+        }
+
+        .intro-soc__link {
+          display: flex;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          align-items: center;
+          justify-content: center;
+          border: 2px solid var(--primary-color);
+          background: transparent;
+          font-size: 24px;
+          color: var(--primary-color);
+          transition: .3s;
+        }
+
+        .intro-soc__link svg {
+          fill: var(--primary-color);
+        }
+
+        .intro-soc__link:hover {
+          background: var(--primary-color);
+          color: var(--white-color);
+          transform: scale(1.15);
+        }
+
+        .intro-soc__link:hover svg {
+          fill: var(--white-color);
+        }
+
+        /* Black Theme */
+
+        body.is-black {
+          background: var(--invert-bg-color);
+        }
+
+        .is-black .header {
+          background: var(--invert-bg-color);
+          box-shadow: 0 -2px 10px rgba(0,0,0,.5);
+        }
+
+        .is-black .header__logo {
+          color: var(--invert-text-color);
+        }
+
+        .is-black .header-menu__link {
+          color: var(--invert-text-color);
+        }
+
+        .is-black .header-menu__link:after {
+          background: var(--invert-primary-color);
+        }
+
+        .is-black .header__moon {
+          color: var(--invert-text-color);
+        }
+
+        .is-black .header__moon svg {
+          fill: var(--invert-text-color);
+        }
+
+        .is-black .intro__title {
+          color: var(--invert-text-color);
+        }
+
+        .is-black .intro__title span {
+          color: var(--invert-primary-color);
+        }
+
+        .is-black .intro__position {
+          color: var(--invert-gray-color);
+        }
+
+        .is-black .intro__text {
+          color: var(--invert-text-color);
+        }
+
+        .is-black .intro-soc__link {
+          color: var(--invert-primary-color);
+          border-color: var(--invert-primary-color);
+        }
+
+        .is-black .intro-soc__link svg {
+          fill: var(--invert-primary-color);
+        }
+
+        .is-black .intro-soc__link:hover {
+          background: var(--invert-primary-color);
+          color: var(--white-color);
+        }
+
+        .is-black .intro-soc__link:hover svg {
+          fill: var(--white-color);
+        }
+
+        .is-black .header__mob-menu {
+          color: var(--invert-text-color);
+        }
+
+        .is-black .header__mob-menu svg {
+          fill: var(--invert-text-color);
+        }
+
+        /* Media Queries */
+
+        @media (max-width: 1023px) {
+          .header-menu__link {
+            font-size: 16px;
+          }
+          .header__logo {
+            font-size: 24px;
+          }
+          .intro__title {
+            font-size: 42px;
+          }
+          .intro__position {
+            font-size: 18px;
+            margin-bottom: 20px;
+          }
+          .intro__text {
+            font-size: 14px;
+            margin-bottom: 20px;
+          }
+          .intro-soc {
+            margin-top: 20px;
+          }
+        }
+
+        @media (max-width: 767px) {
+          .header {
+            padding: 20px 0;
+          }
+          .intro {
+            min-height: calc(100vh - 69px);
+          }
+          .header-menu {
+            position: fixed;
+            top: 69px;
+            left: 100%;
+            width: 100%;
+            height: calc(100vh - 69px);
+            background: rgba(255,255,255,.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .3s;
+          }
+          .header-menu.is-active {
+            left: 0;
+          }
+          .header-menu__list {
+            flex-direction: column;
+          }
+          .header__mob {
+            display: block;
+          }
+          .is-black .header-menu {
+            background: rgba(0,0,0,.8);
+          }
+          .header-menu__item:not(:last-child) {
+            margin-bottom: 20px;
+          }
+          .header-menu__link {
+            font-size: 24px;
+          }
+          .intro__body {
+            flex-direction: column-reverse;
+          }
+          .intro__blob {
+            margin-bottom: 30px;
+          }
+          .intro__content {
+            padding: 0;
+          }
+          .intro__title {
+            font-size: 32px;
+            text-align: center;
+          }
+          .intro__position {
+            text-align: center;
+          }
+          .intro__text {
+            text-align: center;
+          }
+          .intro-soc {
+            justify-content: center;
+          }
+        }
+    </style>
+  </head>
+  <body class="is-black">
+    <header class="page__header header">
+      <div class="header__container container">
+        <div class="header__body">
+          <div class="header__leftside">
+            <a href="https://bolzan.io" title="" class="header__logo">BOLZAN</a>
+          </div>
+          <div class="header__rightside">
+            <div class="header__menu header-menu">
+              <ul class="header-menu__list">
+                <li class="header-menu__item">
+                  <a href="https://bolzan.io" title="" class="header-menu__link">Home</a>
+                </li>
+                <li class="header-menu__item">
+                  <a href="https://github.com/tonybolzan" title="Github" class="header-menu__link">Github</a>
+                </li>
+                <li class="header-menu__item">
+                  <a href="https://linkedin.com/in/bolzan" title="Linkedin" class="header-menu__link">Linkedin</a>
+                </li>
+              </ul>
             </div>
-        </div>
-
-        <div class="bannerText container">
-            <h1>Tonin R. Bolzan</h1>
-            <h2>Desenvolvedor Web &#10084; DevOps</h2>
-        </div>
-
-        <div class="menu">
-            <div class="navbar-wrapper">
-                <div class="container">
-                    <div class="navwrapper">
-                        <div class="navbar navbar-inverse navbar-static-top">
-                            <div class="container">
-                                <div class="navbar-header">
-                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </button>
-                                    <a class="navbar-brand" href="#">Menu</a>
-                                </div>
-                                <div class="navbar-collapse collapse">
-                                    <ul class="nav navbar-nav">
-                                        <li class="menuItem active"><a href="#wrapper">Início</a></li>
-                                        <li class="menuItem"><a href="#aboutme">Sobre</a></li>
-                                        <li class="menuItem"><a href="#technical">Habilidades</a></li>
-                                        <li class="menuItem"><a href="#exprience">Trabalhos</a></li>
-                                        <li class="menuItem"><a href="#education">Educação</a></li>
-                                        <li class="menuItem"><a href="#protfolio">Portfólio</a></li>
-                                        <li class="menuItem"><a href="#contact">Contato</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="header__changer">
+              <div class="header__moon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path d="M20.742 13.045a8.088 8.088 0 0 1-2.077.271c-2.135 0-4.14-.83-5.646-2.336a8.025 8.025 0 0 1-2.064-7.723A1 1 0 0 0 9.73 2.034a10.014 10.014 0 0 0-4.489 2.582c-3.898 3.898-3.898 10.243 0 14.143a9.937 9.937 0 0 0 7.072 2.93 9.93 9.93 0 0 0 7.07-2.929 10.007 10.007 0 0 0 2.583-4.491 1.001 1.001 0 0 0-1.224-1.224zm-2.772 4.301a7.947 7.947 0 0 1-5.656 2.343 7.953 7.953 0 0 1-5.658-2.344c-3.118-3.119-3.118-8.195 0-11.314a7.923 7.923 0 0 1 2.06-1.483 10.027 10.027 0 0 0 2.89 7.848 9.972 9.972 0 0 0 7.848 2.891 8.036 8.036 0 0 1-1.484 2.059z"></path>
+                </svg>
+              </div>
             </div>
+            <div class="header__mob">
+              <div class="header__mob-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </header>
 
-    <section class="aboutme" id="aboutme">
-    	<div class="container">
-        	<div class="heading">
-                <h2>Quem sou eu</h2>
+    <div class="page__intro intro">
+      <div class="intro__container container">
+        <div class="intro__body">
+          <div class="intro__content">
+            <h1 class="intro__title">Hi, I'm <span>Tonin</span></h1>
+            <span class="intro__position">Software Engineer ❤ DevOps</span>
+            <p class="intro__text">
+              SRE Manager at crmpiperun.com and I've been passionate about programming since 2007,
+              I currently work with Web Systems using technologies:
+              Linux, Docker, PHP, Go, Python, Bash, AWS, GCP and a bunch of other acronyms.
+              <br>
+              Active member of the OpenSource community, I have organized several events including DevOpsDays,
+              TcheLinux, Flisol, Software Freedom Day, Femug, Front In.
+            </p>
+            <div class="intro__socials intro-soc">
+              <div class="intro-soc__item">
+                <a href="https://github.com/tonybolzan" title="Github" class="intro-soc__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path>
+                  </svg>
+                </a>
+              </div>
+              <div class="intro-soc__item">
+                <a href="https://linkedin.com/in/bolzan" title="Linkedin" class="intro-soc__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <circle cx="4.983" cy="5.009" r="2.188"></circle>
+                    <path d="M9.237 8.855v12.139h3.769v-6.003c0-1.584.298-3.118 2.262-3.118 1.937 0 1.961 1.811 1.961 3.218v5.904H21v-6.657c0-3.27-.704-5.783-4.526-5.783-1.835 0-3.065 1.007-3.568 1.96h-.051v-1.66H9.237zm-6.142 0H6.87v12.139H3.095z"></path>
+                  </svg>
+                </a>
+              </div>
+              <div class="intro-soc__item">
+                <a href="mailto:contact@bolzan.io" title="Email" class="intro-soc__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="m18.73 5.41-1.28 1L12 10.46 6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64z"></path>
+                  </svg>
+                </a>
+              </div>
             </div>
-            <div class="row">
-                <div class=" col-xs-12 col-sm-12 col-md-7 col-lg-7">
-                    <h3>Tonin de Rosso Bolzan</h3>
-                    <h4 class="subHeading">Desenvolvedor Web & DevOps</h4>
-                    <p>
-                        Programador desde 2008, atualmente trabalho com Desenvolvimento Web utilizando tecnologias
-                        como Linux, Docker, PHP, Python e Go. Mas também já trabalhei com administração de servidores
-                        Debian & RedHat, firewall e segurança.
-                    </p>
-                    <p>
-                        Atuante na comunidade open-source há bastante tempo, costumo me envolver em eventos relacionados a Software Livre,
-                        já tendo organizado alguns eventos, tais como Front In SM, Software Freedom Day SM, Flisol, FEMUG-SM, DevOpsDays e Tchelinux.
-                        Também atuo como palestrante falando sobre assuntos aos quais já trabalhei, principalmente na área de programação e sysadmin.
-                    </p>
-                    <!-- <a href="Tonin_de_Rosso_Bolzan.pdf" class="bntDownload">Baixe uma versão Impressa</a> -->
-                </div>
-                <div class=" col-xs-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-1 col-lg-offset-1 proPic">
-                    <img src="assets/images/me.jpg" alt="" class="img-circle topmar">
-                </div>
-            </div>
+          </div>
+          <svg class="intro__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <mask id="mask0" mask-type="alpha">
+              <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+            </mask>
+            <g mask="url(#mask0)" fill="">
+              <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+              <image class="intro__blob-img" x="50" y="110" href="perfil.webp"/>
+            </g>
+          </svg>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <section class="technical" id="technical">
-    	<div class="container">
+    <script>
+        document.querySelector(".header__moon").onclick = function() {
+            document.querySelector("body").classList.toggle("is-black");
+        }
 
-            <div class="heading">
-                <h2>Habilidades Técnicas</h2>
-                <p>Algumas das áreas de conhecimento com o qual já trabalhei ou me aventurei.</p>
-            </div>
-
-            <div class="row">
-
-                <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
-                    <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills">
-                        <span class="chart skilBg" data-percent="95">
-                            <span class="percent"></span>
-                        </span>
-                        <h4>Linux</h4>
-                        <p>Ambientes de trabalho e servidores Linux Debian e RedHat</p>
-                    </div>
-                </div>
-
-                <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
-                    <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills">
-                        <span class="chart skilBg" data-percent="90">
-                            <span class="percent"></span>
-                        </span>
-                        <h4>PHP 7</h4>
-                        <p>Desenvolvimento em PHP, auxiliado de frameworks como Symfony, Laravel e Yii</p>
-                    </div>
-                </div>
-
-                <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
-                    <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills">
-                        <span class="chart skilBg" data-percent="90">
-                            <span class="percent"></span>
-                        </span>
-                        <h4>MySQL / MariaDB</h4>
-                        <p>Administração e modelagem de grandes Bancos de Dados relacionais</p>
-                    </div>
-                </div>
-
-                <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
-                    <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills">
-                        <span class="chart skilBg" data-percent="85">
-                            <span class="percent"></span>
-                        </span>
-                        <h4>HTML5 / CSS3</h4>
-                        <p>Codificação de layouts e temas usando templates engines e pré-processadores (Less, Sass)</p>
-                    </div>
-                </div>
-
-                <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
-                    <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills">
-                        <span class="chart skilBg" data-percent="75">
-                            <span class="percent"></span>
-                        </span>
-                        <h4>Javascript</h4>
-                        <p>Desenvolvimento front-end e back-end</p>
-                    </div>
-                </div>
-
-                <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
-                    <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills">
-                    	<span class="chart skilBg" data-percent="75">
-                            <span class="percent"></span>
-                        </span>
-                        <h4>Python 3</h4>
-                        <p>Desenvolvimento de scripts/crawlers de automação para tarefas repetitivas ou de background</p>
-                    </div>
-                </div>
-
-                <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
-                    <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills">
-                    	<span class="chart skilBg" data-percent="60">
-                            <span class="percent"></span>
-                        </span>
-                        <h4>Go Lang</h4>
-                        <p>Desenvolvimento Web e CLI</p>
-                    </div>
-                </div>
-
-                <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
-                    <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills">
-                    	<span class="chart skilBg" data-percent="75">
-                            <span class="percent"></span>
-                        </span>
-                        <h4>Docker / K8S</h4>
-                        <p>Orquestração de microserviços</p>
-                    </div>
-                </div>
-
-                <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
-                    <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills">
-                    	<span class="chart skilBg" data-percent="80">
-                            <span class="percent"></span>
-                        </span>
-                        <h4>AWS / GCP / DigitalOcean</h4>
-                        <p>Cloud Providers</p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-	<section class="exprience" id="exprience">
-
-    	<div class="container">
-        	<div class="heading">
-                <h2>Experiências de Trabalho</h2>
-                <p>O que eu fiz e faço como colaborador para empresas</p>
-            </div>
-
-            <div class="row workDetails">
-                <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
-                    <div class="workYear">Set, 2014<br> Presente</div>
-                </div>
-                <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
-                    <div class="arrowpart"></div>
-                    <div class="exCon">
-                        <h4>UmanoTec.com <a href="https://umanotec.com/" target="_blank" class="fa fa-link"></a></h4>
-                        <h5>CTO & Desenvolvedor Web</h5>
-                        <p>Responsável pelo desenvolvimento do Sistema Integrado Multidiagnóstico em Saúde (SIMUS) para o SUS</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row workDetails">
-            	<div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
-                	<div class="workYear">Fev, 2012<br> Set, 2014</div>
-                </div>
-                <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
-                	<div class="arrowpart"></div>
-                    <div class="exCon">
-                    	<h4>Grupo ADVIS <a href="http://grupoadvis.com.br/" target="_blank" class="fa fa-link"></a></h4>
-                        <h5>Coordenador de Desenvolvimento Web e Programador</h5>
-                        <p>Responsável por coordenar e desenvolver o Sistema de Gestão de Cargos e Salários (SGCS)</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row workDetails">
-                <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
-                    <div class="workYear">Mar, 2007<br> Out, 2011</div>
-                </div>
-                <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
-                    <div class="arrowpart"></div>
-                    <div class="exCon">
-                        <h4>Exército Brasileiro (29ºBIB) <a href="http://www.29bib.eb.mil.br/" target="_blank" class="fa fa-link"></a></h4>
-                        <h5>SysAdmin e Programador PHP</h5>
-                        <p>
-                            Administrador de sistemas Linux, responsável pelos servidores de HTTP, DNS, DHCP, LDAP, NAS, Proxy, Firewall, PXE, entre outros.
-                            <br>
-                            Criador dos sistemas de pesquisas em boletins internos e do controle de alistamento militar da região centro do Rio Grande Do Sul.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="education" id="education">
-        <div class="container">
-        	<div class="heading">
-                <h2>Educação & Diplomas</h2>
-                <p>O que eu tenho feito em minha carreira acadêmica</p>
-            </div>
-
-            <div class="row workDetails">
-            	<div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
-                	<div class="workYear">Jun, 2008<br>Dez, 2014</div>
-                </div>
-                <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
-                	<div class="arrowpart"></div>
-                    <div class="exCon">
-                    	<h4>Bacharel em Sistemas de Informação</h4>
-                        <h5>Universidade Franciscana (<a style="color: #428bca;" target="_blank" href="http://www.ufn.edu.br/">UFN</a>)</h5>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-	<section class="protfolio" id="protfolio">
-
-        <div class="container">
-            <div class="heading">
-                <h2>Portfólio</h2>
-                <p>Alguns dos meus trabalhos</p>
-            </div>
-
-            <div class="portfolioFilter">
-                <ul>
-                    <li><a href="#" data-filter="*" class="current">Todos</a></li>
-                    <li><a href="#" data-filter=".sistemas">Sistemas</a></li>
-                    <li><a href="#" data-filter=".sites">Sites</a></li>
-                    <li><a href="#" data-filter=".projetos">Projetos</a></li>
-                </ul>
-            </div>
-
-            <ul class="portfolioContainer row">
-
-                <li class="sistemas col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                    <div class="lightCon">
-                        <span class="hoverBox">
-                        	<span class="smallIcon">
-                                <a rel="lightbox-demo" href="assets/images/portfolio/simus2.jpg" title="Umanotec - SIMUS" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a>
-                                <a href="http://simus.net.br" title="Umanotec - SIMUS" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></a>
-                            </span>
-                        </span>
-                        <img src="assets/images/portfolio/simus1.jpg" alt="Umanotec - SIMUS">
-                    </div>
-                </li>
-
-                <li class="sistemas col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                    <div class="lightCon">
-                        <span class="hoverBox">
-                            <span class="smallIcon">
-                                <a rel="lightbox-demo" href="assets/images/portfolio/sgcs2.png" title="Grupo ADVIS - SGCS" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a>
-                                <a href="http://grupoadvis.com.br/" title="Grupo ADVIS - SGCS"  target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></a>
-                            </span>
-                        </span>
-                        <img src="assets/images/portfolio/sgcs1.png" alt="Grupo ADVIS - SGCS">
-                    </div>
-                </li>
-
-                <li class="sites col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                    <div class="lightCon">
-                        <span class="hoverBox">
-                            <span class="smallIcon">
-                                <a rel="lightbox-demo" href="assets/images/portfolio/sfdsm2.jpg" title="Software Freedom Day - Santa Maria" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a>
-                                <a href="#" title="Software Freedom Day - Santa Maria" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></a>
-                            </span>
-                        </span>
-                        <img src="assets/images/portfolio/sfdsm1.png" alt="Software Freedom Day - Santa Maria">
-                    </div>
-                </li>
-
-            </ul>
-        </div>
-
-    </section>
-
-	<section class="contact" id="contact">
-    	<div class="container topCon">
-        	<div class="heading">
-                <h2>Entre em Contato</h2>
-                <p>Por favor, sinta-se a vontade se você quiser conversar.</p>
-            </div>
-        </div>
-
-        <div class="row mapArea">
-        	<iframe style="pointer-events: none;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/?ie=UTF8&amp;ll=-29.687747,-53.820020&amp;spn=0.01134,0.026157&amp;t=m&amp;z=13&amp;output=embed"></iframe>
-        </div>
-    </section>
-
-    <section class="contactDetails">
-        <div class="container">
-
-            <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4">
-                <h4>Contato</h4>
-                <p><i class="fa fa-map-marker fa-lg"></i> Santa Maria, RS - Brasil</p>
-                <p><i class="fa fa-envelope-o "></i> <a href="mailto:contato@bolzan.io">contato@bolzan.io</a></p>
-                <p><i class="fa fa-link "></i> <a href="http://bolzan.io">bolzan.io</a></p>
-            </div>
-
-            <div class="col-xs-12 col-sm-9 col-md-8 col-lg-8 conForm">
-                <h4>Deixe sua mensagem!</h4>
-                <div id="message"></div>
-                <form name="contato" data-netlify="true" data-netlify-honeypot="bot-field">
-                	<p class="hidden"><label><input name="bot-field"/></label></p>
-                    <input name="name" id="name" type="text" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" placeholder="Seu Nome...">
-                    <input name="email" id="email" type="email" class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 noMarr" placeholder="Seu E-Mail...">
-                    <textarea name="comment" id="comments" cols="" rows="" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Sua Mensagem..."></textarea>
-                    <div>
-                        <div data-netlify-recaptcha></div>
-                        <input type="submit" id="submit" class="submitBnt" value="Enviar Mensagem">
-                    </div>
-                    <div id="simple-msg"></div>
-                </form>
-            </div>
-
-        </div>
-    </section>
-
-  	<section class="footer" id="footer">
-      	<div class="container">
-            <ul>
-                <li><a target="_blank" href="https://facebook.com/tonybolzan"><i class="fa fa-facebook fa-2x"></i></a></li>
-                <li><a target="_blank" href="https://twitter.com/tonybolzan"><i class="fa fa-twitter fa-2x"></i></a></li>
-                <li><a target="_blank" href="https://github.com/tonybolzan"><i class="fa fa-github-alt fa-2x"></i></a></li>
-                <li><a target="_blank" href="https://bitbucket.org/tonybolzan"><i class="fa fa-bitbucket fa-2x"></i></a></li>
-                <li><a target="_blank" href="https://www.linkedin.com/in/bolzan/"><i class="fa fa-linkedin fa-2x"></i></a></li>
-                <li><a target="_blank" href="https://speakerdeck.com/bolzan"><i class="fa fa-columns fa-2x"></i></a></li>
-            </ul>
-        </div>
-    </section>
-
-</div>
-
-<script type="text/javascript" src="assets/js/all.min.js"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-15234576-4', 'auto');
-  ga('send', 'pageview');
-</script>
-
-</body>
+        document.querySelector(".header__mob-menu").onclick = function() {
+            document.querySelector(".header-menu").classList.toggle("is-active");
+        }
+    </script>
+  </body>
 </html>
